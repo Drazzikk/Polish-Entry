@@ -156,7 +156,7 @@ template<typename T>
 class Stack : private TVector<T> {
 
 public:
-    using TVector::sz;
+    using TVector<T>::sz;
     using TVector<T>::Full;
     using TVector<T>::Empty;
     using TVector<T>::size;
@@ -174,7 +174,7 @@ public:
 
     T top() const {
         if (Empty()) throw std::domain_error("domain_error");
-        return pMem[sz - 1];
+        return this->pMem[this->sz - 1];
     }
 };
 
