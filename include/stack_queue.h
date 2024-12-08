@@ -156,6 +156,7 @@ template<typename T>
 class Stack : private TVector<T> {
 
 public:
+    using TVector::sz;
     using TVector<T>::Full;
     using TVector<T>::Empty;
     using TVector<T>::size;
